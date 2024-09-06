@@ -1,0 +1,200 @@
+/* General body styles for screen display */
+body {
+  font-family: "Georgia", serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container styled to look like a single-page paper */
+.cv-container {
+  width: 21cm; /* A4 width */
+  height: 29.7cm; /* A4 height */
+  background-color: #fff;
+  padding: 50px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  overflow: hidden; /* Ensures content stays within the page */
+  page-break-inside: avoid; /* Prevents page break within the element when printing */
+}
+
+/* Header styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  /* margin-bottom: 30px; */
+  border-bottom: 2px solid #ddd;
+  /* padding-bottom: 20px; */
+}
+
+.profile {
+  flex: 2;
+}
+
+.profile h1 {
+  font-size: 48px;
+  margin: 0;
+  font-family: "Georgia", serif;
+}
+
+.profile h1 span {
+  color: #555;
+}
+
+.title-container {
+  position: relative;
+  top: -30px;
+}
+
+.title {
+  font-size: 20px;
+  color: #444;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+}
+
+.summary {
+  font-size: 16px;
+  max-width: 500px;
+  color: #666;
+  /* margin-top: 10px; */
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  /* gap: 15px; */
+  font-size: 16px;
+  color: #666;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.contact-item img {
+  width: 18px;
+  height: 18px;
+}
+
+.profile-image {
+  flex: 1;
+  text-align: right;
+  margin-right: 20px;
+}
+
+.profile-image img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+
+.left-column {
+  border-right: 2px solid #ddd;
+  padding-right: 20px;
+  width: 40%;
+}
+
+.right-column {
+  padding-left: 20px;
+  width: 60%;
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-family: "Georgia", serif;
+  font-size: 22px;
+  color: #555;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+}
+
+p strong {
+  font-size: 18px;
+}
+
+.skills-list,
+.job ul {
+  padding-left: 20px;
+  list-style: none;
+}
+
+.skills-list li::before,
+.job ul li::before {
+  content: "• ";
+  color: #555;
+}
+
+.skills-list li,
+.job ul li {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.job h3 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.development-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.development-item {
+  width: 48%;
+}
+
+.development-item p {
+  font-size: 16px;
+}
+
+/* Print styling */
+@media print {
+  body {
+    background-color: #fff;
+    padding: 0;
+  }
+
+  .cv-container {
+    box-shadow: none;
+    border: none;
+    width: 100%;
+    height: auto;
+    page-break-after: always; /* Forces page break in printing */
+  }
+
+  header {
+    border-bottom: 1px solid #000;
+  }
+}
