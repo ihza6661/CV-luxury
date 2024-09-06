@@ -1,22 +1,10 @@
-/* body {
+body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
   color: #333;
   background-color: #533b008a;
-  
-} */
-body {
-  font-family: "Georgia", serif;
-  line-height: 1.6;
-  color: #333;
-  background-color: #f0f0f0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-  padding: 0;
 }
+
 @font-face {
   font-family: "Berling Nova Display W04 Rg";
   src: url("https://db.onlinewebfonts.com/t/0955717161498669b4fd0a29bdafeeee.eot");
@@ -33,23 +21,12 @@ body {
 }
 
 .cv-container {
-  width: 21cm; /* A4 width */
-  height: 29.7cm; /* A4 height */
-  background-color: #fff;
-  padding: 50px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  border: 1px solid #ddd;
-  overflow: hidden; /* Ensures content stays within the page */
-  page-break-inside: avoid; /* Prevents page break within the element when printing */
-}
-/* .cv-container {
   max-width: 800px;
   margin: 20px auto;
   background-color: #fff;
   padding: 30px 80px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-} */
+}
 
 header {
   display: flex;
